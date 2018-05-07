@@ -8,7 +8,8 @@ def course_list(request):
     courses = Course.objects.all()
     # output=', '.join([str(course) for course in courses])
     # return HttpResponse(output)
-    return render(request, 'courses/course_list.html', {'courses': courses })
+    email = 'questions@learning_site.com'
+    return render(request, 'courses/course_list.html', {'courses': courses, 'email': email   })
 
 def course_detail(request, pk):
     # course = Course.objects.get(pk=pk)
